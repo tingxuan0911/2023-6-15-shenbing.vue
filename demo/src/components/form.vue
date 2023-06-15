@@ -45,7 +45,7 @@ const send = () => {
       } else {
         alert(res.data.msg)
       }
-      isDisabled.value = false //disable屬性為false，alert按掉後.disabled css變回unset
+      isDisabled.value = false //disable屬性為false，alert 按掉後.disabled css變回unset
     })
     .catch(error => {
       console.log(error);
