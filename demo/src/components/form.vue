@@ -38,7 +38,7 @@ const send = () => {
       console.log(res.data)
       if (res.data.code) {
         alert('傳送完成');
-        inputClean()// 清空 input
+        inputClean()// 清空 input 
         showThank()// 顯示 .sendOK 3秒
       } else if (res.data.message) {
         alert(res.data.message)
