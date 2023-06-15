@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "3127a269-0bfa-45b1-862c-92d61443d7e7",
+		"name": "CGT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24305436",
+		"_collection_link": "https://restless-comet-657088.postman.co/workspace/Team-Workspace~fa277377-7d8c-4c8b-82cc-d7b795e529fe/collection/24305436-3127a269-0bfa-45b1-862c-92d61443d7e7?action=share&creator=24305436&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "addCgtnews",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "聯準會確認升息後美股上漲，BTC、ETH回升、Lido漲超四成",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/hoholin/Desktop/CGTnews/news6-2.png"
+						},
+						{
+							"key": "content",
+							"value": "<div class=\"news-content mb-5\"> <p>美國聯準會官員周三一致同意將聯邦利率調升到2.25～2.5% 區間。但會後美股走高，華爾街日報認為因主席鮑威爾未對未來加息幅度透露具體資訊，並暗示會放慢升息腳步。 <a href=\"https://crypto.cnyes.com/BTC/24h\">比特幣</a>24 小時漲幅近10%，<a href=\"https://crypto.cnyes.com/ETH/24h\">以太幣</a>上漲近15%；截稿前分別為23138 與1644。 </p> <p>鮑威爾表示，這幾次的加息幅度又快又大，但經濟可能還會感受加息貸來的全面影響，所以可以還會有額外的重大緊縮措施。只是九月份會否減緩升息幅度0.5 或0.25 個百分點，還無法確定。他也暗示，聯準會不太可能僅僅因為增長放緩，而慢下加息步伐。鮑威爾表示，聯準會認為經濟衰退不是降低通脹的必要條件。 </p> <p><a href=\"https://crypto.cnyes.com/BTC/24h\">加密貨幣</a>市場隨著聯準會後的美股市場上漲回升，非穩定幣十大市值<a href=\"https://crypto.cnyes.com/BTC/24h\">加密貨幣</a>24 小時幾乎都有超過10% 的回升，其中以ETH、DOT 與MATIC 有14~15% 的漲幅。 30 日以來，MATIC 漲幅最大近70%、ETH 漲幅也有39%。 </p> <p>百大市值中，<a href=\"https://crypto.cnyes.com/ETH/24h\">以太幣</a>質押協議Lido Finance 24 小時漲近五成，30 日已有272% ; Lido Finance 治理社群正在討論，如何由風投機構Dragonfly 溢價收購LDO，以協助其熊市營運。 </p> </div><img src=\"http://192.168.66.17:81/storage/2dP9CXpiUZ816TpQZzieVoEeVuPwEBJlU0dtLsEA.png\" class=\"img-fluid mx-auto d-block mb-5\" alt=\"\">",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "192.168.66.17:81/storePicture",
+					"host": [
+						"192",
+						"168",
+						"66",
+						"17"
+					],
+					"port": "81",
+					"path": [
+						"storePicture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showCgtnews",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "192.168.66.17:81/showCgtnews/",
+					"host": [
+						"192",
+						"168",
+						"66",
+						"17"
+					],
+					"port": "81",
+					"path": [
+						"showCgtnews",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendEmail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "林先生",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "gsedfefe@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "msg",
+							"value": "背靠在樹枝上\n蜻蜓落在露水旁乘涼\n表白後的烏梅樹下 土壤發了芽\n美得不像話\n再讓我想一想\n那最膩的情話怎麼講\n慢火熬的細水長流 念長長久久\n約好到白頭\n你淺淺的微笑就像 烏梅子醬\n我嚐了你嘴角唇膏 薄荷味道\n是甜甜的愛情 來得這麼確定\n因為你每個害羞的反應\n你淺淺的微笑就像 烏梅子醬\n迎風吹過你的頭髮 我好喜歡\n厚厚的甜蜜感 用幸福秤桿秤一些收藏\n合照一張 和夕陽",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "192.168.66.17:81/sendEmail/",
+					"host": [
+						"192",
+						"168",
+						"66",
+						"17"
+					],
+					"port": "81",
+					"path": [
+						"sendEmail",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
