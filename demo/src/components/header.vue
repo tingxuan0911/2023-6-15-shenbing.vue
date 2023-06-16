@@ -42,13 +42,13 @@ const check = ref(false)
                 <div class="line line-3"></div>
                 <nav class="menu" :class="{ active: check }">
                     <ul>
-                        <li><router-link to="/" @click="check = !check, goTo('body')">首頁</router-link></li>
-                        <li><router-link to="/about" @click="check = !check, goTo('body')">關於我們</router-link></li>
+                        <li><router-link to="/" @click="check = false, goTo('body')">首頁</router-link></li>
+                        <li><router-link to="/about" @click="check = false, goTo('body')">關於我們</router-link></li>
                         <li>
-                            <router-link to="/" @click="goTo('.main-main'), check = !check">服務項目</router-link>
+                            <router-link to="/" @click="goTo('.main-main'), check = false">服務項目</router-link>
                         </li>
                         <li>
-                            <router-link to="" @click="check = !check, goTo('footer')">聯絡我們</router-link>
+                            <router-link to="" @click="check = false, goTo('footer')">聯絡我們</router-link>
                         </li>
                         <!-- <li><a href="#main-main">服務項目</a></li> -->
                         <!-- <li><a href="Form">聯絡我們</a></li> -->
