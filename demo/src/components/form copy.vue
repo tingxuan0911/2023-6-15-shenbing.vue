@@ -52,22 +52,22 @@ const send = () => {
     })
 }
 
-//表單驗證
-// const inputValue = ref('');
-// const validateForm = () => {
-//       const inputElement = document.querySelector('input');
-//       inputElement.reportValidity();
-//     }
-
+// 表單驗證
+const validateForm = () => {
+  const inputElements = document.querySelectorAll('input');
+  inputElements.forEach(input => {
+    input.reportValidity();
+  });
+}
 </script>
 
 <template>
   <footer>
     <h2>聯絡我們</h2>
-    <form @submit.prevent="send"><!-- 點擊按鈕submit後，跑send();使用.prevent畫面不會重新載入 -->
+    <form @submit.prevent="send">
       <div>
         <label>姓名*<br>
-          <input type="text" name="name" v-model="form.name" required><!-- form表單的name用v-model綁定key -->
+          <input type="text" name="name" v-model="form.name" required>
         </label>
         <label>信箱*<br>
           <input type="email" name="mail" v-model="form.mail" required>
@@ -79,7 +79,7 @@ const send = () => {
       <label>留言<br>
         <textarea id="" name="msg" cols="30" rows="10" v-model="form.msg"></textarea>
       </label>
-      <button type="submit" @click="send()" :disabled="isDisabled">送出</button><!-- disabled:button禁用語法 -->
+      <button type="submit" @click="validateForm" :disabled="isDisabled">送出</button>
       <p class="sendOK" v-if="showSendOK">感謝您!我們將盡快與您聯繫!</p>
     </form>
     <div class="info">
@@ -206,3 +206,4 @@ button:focus {
   }
 }
 </style>
+
